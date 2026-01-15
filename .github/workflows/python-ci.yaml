@@ -1,4 +1,5 @@
 name : Python CI
+
 on: [push, workflow_dispatch]
 
 jobs:
@@ -18,7 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest pytest-cov
       - name: Run Tests
-        run: pytest --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        run: pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=app_zamwans --cov-report=xml --cov-report=html
 
       - name: Build
         working-directory: my_package
