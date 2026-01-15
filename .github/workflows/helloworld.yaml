@@ -1,0 +1,9 @@
+name: Hello World GitHub Action
+
+# Controls when the workflow will run
+on: [push, workflow_dispatch]
+jobs:
+  Hello-World:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World from Gihub Actions"
