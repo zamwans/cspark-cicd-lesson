@@ -1,0 +1,14 @@
+name : Python CI
+on: [push, workflow_dispatch]
+
+jobs:
+  PythonVersionSetUp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.x'
+      - run: python --version
+      - run: pip --version
+
